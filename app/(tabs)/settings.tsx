@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
+export default function SettingsScreen() {
   return (
     <View style={styles.titleContainer}>
-      <Text style={styles.title}>This is the details</Text>
+      <Text style={styles.title}>This is the settings</Text>
     </View>
   );
 }
