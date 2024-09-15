@@ -6,10 +6,20 @@ export default function Index() {
   return (
     <View style={styles.titleContainer}>
       <Text style={styles.title}>This is the home</Text>
-      <Link href={"/details"} asChild>
+      <Link href={"/details/1"} asChild>
         <Pressable style={styles.button}>
             <Text style={styles.text}>
-            View details
+            View first details
+            </Text>
+        </Pressable>
+      </Link>
+      <Link href={{
+        pathname: '/details/[id]',
+        params: {id: 'btw'}
+      }} asChild>
+        <Pressable style={styles.button}>
+            <Text style={styles.text}>
+            View second details
             </Text>
         </Pressable>
       </Link>
@@ -35,6 +45,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
+    marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 12,
